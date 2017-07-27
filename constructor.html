@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>FatArrow Function</title>
+    <script src="constructor.js" type="application/javascript"></script>
+    <script type="application/javascript">
+        function myFunction(userName, num) {
+            var con = new ConstructorDemo(userName, num);
+            document.getElementById("header").innerHTML = con.getMessage();
+        }
+
+</script>
+<style>
+    #header{
+        font-size: 26px;
+        margin: 20px;
+    }
+    #main{
+        margin: 20px;
+    }
+    input{
+        margin: 5px;
+    }
+    label{
+        margin: 5px;
+    }
+    button{
+        margin: 5px;
+        border-radius: 2px;
+    }
+</style>
+</head>
+
+<body onload="myFunction('Guest', 209)">
+    <header id="header">
+    </header >
+    <section id="main">
+        <div>
+            <label>Enter Name:</label><br>
+            <input type="text" placeholder="UserName" id="userName" value="Guest"><br>
+            <label>Enter Number:</label><br>
+            <input type="text" placeholder="LuckyNumber" id="luckyNumber" value="209"><br>
+            <button onclick="myFunction(document.getElementById('userName').value, document.getElementById('luckyNumber').value)";>Reserve</button>
+        </div>
+    </section>
+    
+</body>
+
+</html>
